@@ -1,6 +1,5 @@
 #include "std_lib_facilities.h"
 
-void in_file_text(string& name_file, string& data);
 void tolower(string& s);
 void out_file_text(string& data, string& name_f);
 
