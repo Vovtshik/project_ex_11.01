@@ -8,10 +8,10 @@ int main()
     setlocale(LC_ALL, "Rus");
     cout << "Enter the text: \n";
     string str;
-    cin >> str;
-    string name_f;
+    getline(cin, str);
     cout << "Enter the name of the output file to write the line:\n";
-	cin >> name_f;
+	string name_f;
+    getline(cin, name_f);
     out_file_text(str, name_f);
     return 0;
 }
