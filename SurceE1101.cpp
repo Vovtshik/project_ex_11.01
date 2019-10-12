@@ -31,7 +31,7 @@ void in_file_text(string& name_file, string& data)
 
 void tolower(string& s)
 {
-    for(char&x : s)
+    for(char& x : s)
     {
         x = tolower(x);
     }
