@@ -28,3 +28,21 @@ void in_file_text(string& name_file, string& data)
     getline(ist, data);
     
 }
+
+void tolower(string& s)
+{
+    for(char&x : s)
+    {
+        x = tolower(x);
+    }
+}
+
+void out_file_text(string& data, string& name_f)
+{
+   string temp{data};
+   tolower(temp);
+//    ostringstream os(temp);
+   ofstream ost{name_f};
+   if (!ost) error("Unable to open output file ", name_f);
+   ost << temp << '\n';
+//    ost << os.str();
