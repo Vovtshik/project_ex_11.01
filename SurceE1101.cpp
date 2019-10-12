@@ -1,6 +1,6 @@
 #include "std_lib_facilities.h"
 
-void reading_numbers(string& name_file, string& data);
+void it_file_text(string& name_file, string& data);
 
 int main()
 {
@@ -9,13 +9,13 @@ int main()
     string data;
     cout << "Enter a file name for reading text:\n";
     cin >> name_file;
-    reading_numbers(name_file, data);
+    it_file_text(name_file, data);
     cout << data << '\n';  
 
     return 0;
 }
 
-void reading_numbers(string& name_file, string& data)
+void it_file_text(string& name_file, string& data)
 {
     ifstream ist(name_file);
     if(!ist) error("Unable to open input file ", name_file);
