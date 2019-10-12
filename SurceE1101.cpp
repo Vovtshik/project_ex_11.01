@@ -15,7 +15,7 @@ int main()
     cout << data << '\n';  
     cout << "Enter the name of the output file to write the line:\n";
 	string name_f;
-    getline(cin, name_f);
+    cin >> name_f;
     out_file_text(data, name_f);
     return 0;
 }
