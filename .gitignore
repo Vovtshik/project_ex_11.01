@@ -7,4 +7,5 @@
 *.svg
 *.pdf
 *.xls?
+*.txt
 .gitignor
