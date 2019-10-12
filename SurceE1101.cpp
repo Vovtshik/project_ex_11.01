@@ -33,5 +33,4 @@ void out_file_text(string& data, string& name_f)
    if (!ost) error("Unable to open output file ", name_f);
    ost << temp << '\n';
 //    ost << os.str();
-
 }
