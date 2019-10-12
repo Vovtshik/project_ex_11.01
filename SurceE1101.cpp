@@ -19,3 +19,12 @@ int main()
     out_file_text(data, name_f);
     return 0;
 }
+
+void in_file_text(string& name_file, string& data)
+{
+    ifstream ist(name_file);
+    if(!ist) error("Unable to open input file ", name_file);
+    ist.exceptions(ist.exceptions() | ios_base::badbit);
+    getline(ist, data);
+    
+}
