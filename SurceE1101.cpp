@@ -9,3 +9,11 @@ int main()
 
     return 0;
 }
+
+void tolower(string& s)
+{
+    for(char&x : s)
+    {
+        x = tolower(x);
+    }
+}
