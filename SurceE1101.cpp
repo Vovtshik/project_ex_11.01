@@ -6,9 +6,9 @@ void out_file_text(string& data, string& name_f);
 int main()
 {
     setlocale(LC_ALL, "Rus");
-    cout << "Enter the text: \n";
-    string data;
-    getline(cin, data);
+    // cout << "Enter the text: \n";
+    // string data;
+    // getline(cin, data);
     cout << "Enter the name of the output file to write the line:\n";
 	string name_f;
     getline(cin, name_f);
