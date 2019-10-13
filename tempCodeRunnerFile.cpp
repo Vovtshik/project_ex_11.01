@@ -1,2 +1,2 @@
-
-    for(char&x : s)
+ // for(string x: data)
+    //     cout << x << '\n';
