@@ -31,7 +31,6 @@ void in_file_text(string& name_file, vector<string>& data)
     {
         data.push_back(temp_str);
     }
-    
 }
 
 void tolower(string& s)
