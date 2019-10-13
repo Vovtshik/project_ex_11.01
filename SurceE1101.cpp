@@ -8,12 +8,10 @@ int main()
 {
     setlocale(LC_ALL, "Rus");
     string name_file;
-    // string data;
     vector<string> data;
     cout << "Enter a file name for reading text:\n";
     cin >> name_file;
-    in_file_text(name_file, data);
-    // cout << data << '\n';  
+    in_file_text(name_file, data); 
     for(string x: data)
         cout << x << '\n';
     cout << "Enter the name of the output file to write the line:\n";
@@ -29,13 +27,6 @@ void in_file_text(string& name_file, vector<string>& data)
     if(!ist) error("Unable to open input file ", name_file);
     ist.exceptions(ist.exceptions() | ios_base::badbit);
     string temp_str;
-    // while(true)
-    // {
-    //     getline(ist, temp_str);
-    //     if(ist)
-    //         data.push_back(temp_str);
-    //     else if(ist.eof()) break;
-    // }
     for(string temp_str; getline(ist, temp_str);)
     {
         data.push_back(temp_str);
@@ -53,9 +44,6 @@ void tolower(string& s)
 
 void out_file_text(vector<string>& data, string& name_f)
 {
-//    string temp;
-//    tolower(temp);
-//    ostringstream os(temp);
    ofstream ost{name_f};
    if (!ost) error("Unable to open output file ", name_f);
    for(string x: data)
@@ -63,6 +51,4 @@ void out_file_text(vector<string>& data, string& name_f)
        tolower(x);
        ost << x << '\n'; 
    }
-//    ost << temp << '\n';
-//    ost << os.str();
 }
