@@ -13,7 +13,9 @@ int main()
     cout << "Enter a file name for reading text:\n";
     cin >> name_file;
     in_file_text(name_file, data);
-    cout << data << '\n';  
+    // cout << data << '\n';  
+    for(string x: data)
+        cout << x << '\n';
     cout << "Enter the name of the output file to write the line:\n";
 	string name_f;
     cin >> name_f;
@@ -26,7 +28,18 @@ void in_file_text(string& name_file, vector<string>& data)
     ifstream ist(name_file);
     if(!ist) error("Unable to open input file ", name_file);
     ist.exceptions(ist.exceptions() | ios_base::badbit);
-    getline(ist, data);
+    string temp_str;
+    // while(true)
+    // {
+    //     getline(ist, temp_str);
+    //     if(ist)
+    //         data.push_back(temp_str);
+    //     else if(ist.eof()) break;
+    // }
+    for(string temp_str; getline(ist, temp_str);)
+    {
+        data.push_back(temp_str);
+    }
     
 }
 
