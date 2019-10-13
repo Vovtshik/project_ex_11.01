@@ -53,11 +53,16 @@ void tolower(string& s)
 
 void out_file_text(vector<string>& data, string& name_f)
 {
-   string temp{data};
-   tolower(temp);
+//    string temp;
+//    tolower(temp);
 //    ostringstream os(temp);
    ofstream ost{name_f};
    if (!ost) error("Unable to open output file ", name_f);
-   ost << temp << '\n';
+   for(string x: data)
+   {
+       tolower(x);
+       ost << x; 
+   }
+//    ost << temp << '\n';
 //    ost << os.str();
 }
