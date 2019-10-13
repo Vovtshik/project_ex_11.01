@@ -1,14 +1,15 @@
 #include "std_lib_facilities.h"
 
-void in_file_text(string& name_file, string& data);
+void in_file_text(string& name_file, vector<string>& data);
 void tolower(string& s);
-void out_file_text(string& data, string& name_f);
+void out_file_text(vector<string>& data, string& name_f);
 
 int main()
 {
     setlocale(LC_ALL, "Rus");
     string name_file;
-    string data;
+    // string data;
+    vector<string> data;
     cout << "Enter a file name for reading text:\n";
     cin >> name_file;
     in_file_text(name_file, data);
@@ -20,7 +21,7 @@ int main()
     return 0;
 }
 
-void in_file_text(string& name_file, string& data)
+void in_file_text(string& name_file, vector<string>& data)
 {
     ifstream ist(name_file);
     if(!ist) error("Unable to open input file ", name_file);
@@ -37,7 +38,7 @@ void tolower(string& s)
     }
 }
 
-void out_file_text(string& data, string& name_f)
+void out_file_text(vector<string>& data, string& name_f)
 {
    string temp{data};
    tolower(temp);
