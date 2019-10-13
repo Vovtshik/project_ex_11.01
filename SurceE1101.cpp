@@ -12,8 +12,6 @@ int main()
     cout << "Enter a file name for reading text:\n";
     cin >> name_file;
     in_file_text(name_file, data); 
-    // for(string x: data)
-    //     cout << x << '\n';
     cout << "Enter the name of the output file to write the line:\n";
 	string name_f;
     cin >> name_f;
