@@ -61,7 +61,7 @@ void out_file_text(vector<string>& data, string& name_f)
    for(string x: data)
    {
        tolower(x);
-       ost << x; 
+       ost << x << '\n'; 
    }
 //    ost << temp << '\n';
 //    ost << os.str();
